@@ -1,5 +1,9 @@
 const leapYears = function(year) {
-    if ((year % 4) == 0) {
+    const fourDivisible = year % 4 === 0;
+    const century = year % 100 === 0;
+    const fourHundredDivisble = year % 400 === 0;
+
+    if (fourDivisble && (!century || fourHundredDivisible)) {
         return true
     }
     else {
