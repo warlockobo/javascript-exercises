@@ -6,8 +6,8 @@ const fibonacci = function(count) {
       // Translated to JavaScript:
       fib[i] = fib[i - 2] + fib[i - 1];
     };
-
-    return fib[count];
+    
+    return (count < 0 ? "OOPS" : fib[count]);
 
 };
 
